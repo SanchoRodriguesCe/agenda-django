@@ -1,0 +1,38 @@
+{% csrf_token %}
+<div class="form-group">
+  <label for="{{ form.nome.id_for_label }}">{{ form.nome.label}}:</label>
+    <!-- <input type="text" name="nome" value="{{ contato.nome }}" placeholder ="Nome" class="form-control" required  > -->
+      {{ form.nome }}
+      {{ form.nome.errors }}
+</div>
+
+<p>
+  <label for="{{ form.endereco.id_for_label }}">{{ form.endereco.label}}:</label>
+    <!-- <input type="text" name="nome" value="{{ contato.endereco }}" placeholder ="Endereço" class="form-control" required  > -->
+  {{ form.endereco }}
+  {{ form.endereco.errors }}
+</p>
+<p>
+  <label for="{{ form.sexo.id_for_label }}">{{ form.sexo.label}}:</label>
+    <!-- <input type="text" name="nome" value="{{ contato.sexo }}" placeholder ="Sexo" class="form-control" required  > -->
+  {{ form.sexo }}
+  {{ form.sexo.errors }}
+</p>
+<p>
+  <label for="{{ form.email.id_for_label }}">{{ form.email.label}}:</label>
+    <!-- <input type="text" name="nome" value="{{ contato.email }}" placeholder ="Email" class="form-control" required  > -->
+  {{ form.email }}
+  {{ form.email.errors }}
+</p>
+<p>
+  <label for="{{ form.numero.id_for_label }}">{{ form.numero.label}}:</label>
+    <!-- <input type="text" name="nome" value="{{ contato.numero }}" placeholder ="Número" class="form-control" required  > -->
+  {{ form.numero }}
+  {{ form.numero.errors }}
+</p>
+
+<div class="actions">
+  <input type="submit" value="Salvar" class="btn btn-sm btn-primary" />
+  <a class="btn btn-sm btn-primary" href="{% url 'contatos_lista' %}">Voltar</a>
+</p>
+<div>
